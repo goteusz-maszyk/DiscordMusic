@@ -1,0 +1,10 @@
+/queuesLeft/*
+!/queuesLeft/.keep
+/log/
+
+/node_modules
+/.vscode
+
+run.bat
+songHistory.json
+config.js

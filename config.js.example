@@ -1,0 +1,9 @@
+module.exports = {
+  token: "discord api token",
+  leave_empty: true,  // leave voice channel when empty
+  leave_finish: false, // leave voice channel when finished
+  leave_stop: false,    // leave voice channel when stopped
+  
+  OWNER_ID: "790956756121288755",
+  color: "#025566" // color of embeds
+}
