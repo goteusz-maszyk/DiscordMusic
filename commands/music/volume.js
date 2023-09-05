@@ -17,8 +17,8 @@ module.exports = {
         await interaction.editReply("Przetwarzam.....");
 
         const volume = args.getInteger('glosnosc');
-
-        if (!volume) {
+        const queue = client.distube.getQueue(interaction);
+        if (volume == undefined) {
             const embed = new EmbedBuilder()
                 .setColor("#025566")
                 .setDescription(`**Aktualna głośność** : \`${queue.volume}\`%`)
@@ -26,7 +26,7 @@ module.exports = {
             return interaction.editReply({ content: ' ', embeds: [embed] });
         }
 
-        if (Number(volume) < 1 || Number(volume) > 100) return interaction.editReply(`Podaj numer między 1 a 100`)
+        if (volume < 1 || volume > 100) return interaction.editReply(`Podaj numer między 1 a 100`)
 
         client.distube.setVolume(interaction, volume);
 

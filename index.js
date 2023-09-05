@@ -92,7 +92,7 @@ class MainClient extends Client {
   }
 
   err(message) {
-    const text = `[${String(new Date).split(" ", 5).join(" ")}] ${message}`
+    let text = `[${String(new Date).split(" ", 5).join(" ")}] ${message.stack}`
     console.error(chalk.redBright(text))
     this.file.write(text + "\n")
   }
